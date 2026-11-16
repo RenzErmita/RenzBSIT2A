@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore comfortable and affordable apartments at Zambales Prime Apartments in Iba, Zambales.">
+  <title>Zambales Prime Apartments</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Zambales Prime Apartments home">
+      <img src="assets/logo.jpg" alt="Zambales Prime Apartments logo">
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="navigation" id="navigation" aria-label="Main navigation">
+      <a href="#about">ABOUT</a>
+      <a href="#apartments">SERVICES</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Zambales Prime<br> Apartments</h1>
+        <h2>Elevate Your Everyday Living.</h2>
+        <p>The Comfort You Deserve, The Home You Want.</p>
+        <p class="tagline">Live Smart, Live Easy.</p>
+        <a class="button button-light" href="#apartments">GET STARTED</a>
+      </div>
+    </section>
+
+    <section class="apartments section" id="apartments">
+      <h2 class="section-title">FEATURED APARTMENTS</h2>
+      <div class="apartment-grid">
+        <article class="apartment-card">
+          <img src="assets/apartment-1.jpg" alt="Interior of the first featured apartment">
+          <h3>1 Bedroom/Bathroom Apartment</h3>
+          <p class="price">₱5,000/month</p>
+          <button class="small-button details-button" data-apartment="0">VIEW DETAILS</button>
+        </article>
+        <article class="apartment-card">
+          <img src="assets/apartment-2.jpg" alt="Interior of the second featured apartment">
+          <h3>1 Bedroom/Bathroom Apartment</h3>
+          <p class="price">₱6,500/month</p>
+          <button class="small-button details-button" data-apartment="1">VIEW DETAILS</button>
+        </article>
+        <article class="apartment-card">
+          <img src="assets/apartment-3.jpg" alt="Interior of the third featured apartment">
+          <h3>1 Bedroom/Bathroom Apartment</h3>
+          <p class="price">₱8,000/month</p>
+          <button class="small-button details-button" data-apartment="2">VIEW DETAILS</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="owner-strip" aria-label="Owner and location">
+      <div class="owner">
+        <img src="assets/profile.jpg" alt="Photo of Renz Ermita">
+        <p>Hi!, I'm Renz Ermita.<br>Welcome to Zambales Prime Apartment.</p>
+      </div>
+      <a class="location-link" href="https://www.google.com/maps/search/?api=1&query=P4+Unsang+Village+Iba+Zambales+Philippines" target="_blank" rel="noopener">
+        <span>P4 Unsang Village, Iba, Zambales</span>
+        <span class="map-icon" aria-hidden="true">⌖</span>
+      </a>
+    </section>
+
+    <section class="about section" id="about">
+      <h2 class="outline-title">ABOUT US</h2>
+      <p>Renz's Apartment offers clean, comfortable, and affordable apartments for students, workers, and small families. Our goal is to provide a safe and convenient place to live.</p>
+    </section>
+
+    <section class="contact section" id="contact">
+      <h2 class="outline-title">CONTACT US</h2>
+      <div class="contact-layout">
+        <div class="contact-left">
+          <form id="contactForm">
+            <label for="name">NAME</label>
+            <input id="name" name="name" type="text" placeholder="Enter your name" required>
+
+            <div class="form-row">
+              <div>
+                <label for="email">EMAIL</label>
+                <input id="email" name="email" type="email" placeholder="Enter your email" required>
+              </div>
+              <div>
+                <label for="subject">SUBJECT</label>
+                <input id="subject" name="subject" type="text" placeholder="Apartment inquiry" required>
+              </div>
+            </div>
+
+            <label for="message">MESSAGE</label>
+            <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+            <div class="send-row">
+              <p class="form-note" id="formNote" role="status">Your email app will open to send your inquiry.</p>
+              <button class="send-button" type="submit">SEND</button>
+            </div>
+          </form>
+
+          <div class="contact-details">
+            <a href="tel:+639075632164"><span class="contact-icon">☎</span> +63 9075632164</a>
+            <a href="mailto:Renzermita@gmail.com"><span class="contact-icon">✉</span> Renzermita@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <img class="building-photo" src="assets/building.jpg" alt="Exterior view of the apartment building">
+          <a class="address-link" href="https://www.google.com/maps/search/?api=1&query=Iba+Zambales+Philippines" target="_blank" rel="noopener">
+            <span class="pin-icon">⌖</span> 013 Iba, Zambales
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Zambales Prime Apartments. All rights reserved.</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <dialog class="details-dialog" id="detailsDialog" aria-labelledby="dialogTitle">
+    <button class="dialog-close" id="dialogClose" aria-label="Close details">×</button>
+    <img id="dialogImage" src="" alt="">
+    <div class="dialog-content">
+      <h2 id="dialogTitle">Apartment details</h2>
+      <p class="dialog-price" id="dialogPrice"></p>
+      <p>A one-bedroom apartment option at Zambales Prime Apartments. For availability, viewing schedules, and complete rental information, please contact the owner.</p>
+      <a class="button dialog-contact" href="#contact" id="dialogContact">INQUIRE NOW</a>
+    </div>
+  </dialog>
+</body>
+</html>
